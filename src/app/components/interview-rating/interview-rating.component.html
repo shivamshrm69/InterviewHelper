@@ -1,0 +1,128 @@
+<body>
+  <div style="display: flex;">
+    <div class='mainCardDiv'>
+      <mat-card class='mainCard'>
+        <h2 style="text-align: center;">Interview Helper</h2>
+        <div>
+          <mat-form-field appearance="outline" style="width: 100%; font-size: 12px;">
+            <mat-label>{{drop}}</mat-label>
+            <mat-select>
+              <mat-option>
+                {{drop}}
+
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="headers">
+          1. Communiation
+          <div class="selectRating">
+            <mat-form-field appearance="outline">
+              <mat-label>Select</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let options of data" [value]="data" (mousedown)="setCummunication(options.rating)">
+                  <button class="btnOption">{{options.ratingText}}</button>
+
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <br>
+
+          <br>
+          <hr>
+          2. Basic of Web Development
+          <div class="selectRating">
+            <mat-form-field appearance="outline">
+              <mat-label>Select</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let options of data" [value]="data" (mousedown)="setDevelopment(options.rating)">
+                  <button class="btnOption">{{options.ratingText}}</button>
+
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="subHeading">
+            Html<br>
+            Css<br>
+            JavaScript
+          </div>
+          <hr>
+          3. OOPS
+          <div class="selectRating">
+            <mat-form-field appearance="outline">
+              <mat-label>Select</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let options of data" [value]="data" (mousedown)="setOops(options.rating)">
+                  <button class="btnOption">{{options.ratingText}}</button>
+
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div><br><br>
+          <hr>
+          4. Programming Language/Framework
+          <div class="selectRating">
+            <mat-form-field appearance="outline">
+              <mat-label>Select</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let options of data" [value]="data" (mousedown)="setProgramming(options.rating)">
+                  <button class="btnOption">{{options.ratingText}}</button>
+
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="subHeading">
+            Programming Language(PHP/Framework/CMS)
+          </div>
+          <hr>
+          5. Version Control
+          <div class="selectRating">
+            <mat-form-field appearance="outline">
+              <mat-label>Select</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let options of data" [value]="data" (mousedown)="setVersion(options.rating)">
+                  <button class="btnOption">{{options.ratingText}}</button>
+
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="subHeading">
+            Git/SVN
+          </div>
+          <hr>
+          6. DataBase
+          <div class="selectRating">
+            <mat-form-field appearance="outline">
+              <mat-label>Select</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let options of data" [value]="data" (mousedown)="setDatabase(options.rating)">
+                  <button class="btnOption">{{options.ratingText}}</button>
+
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="subHeading">
+            Relational DB (MYSQL/Postgres/MSSQL)
+          </div>
+        </div>
+        <br>
+        <button mat-raised-button style="background-color: rgb(15, 170, 61);width: 100%;color: white;"
+          (click)="setResult()">Submit</button>
+      </mat-card>
+    </div>
+
+    <mat-card class="resultCard">Result:<br><br>
+
+      <textarea id="textarea" cols="30" rows="10" [(ngModel)]="value"></textarea>
+      <button [cdkCopyToClipboard]="value">Copy to clipboard</button>
+    </mat-card>
+
+
+  </div>
+
+</body>

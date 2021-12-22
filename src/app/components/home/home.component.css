@@ -1,0 +1,28 @@
+body{
+    background-color: #e2e2e2;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+.mainCard
+{
+margin:auto;
+height: 500px;
+width: 600px;
+
+}
+.mainDiv
+{
+    padding-top: 50px;
+}
+.btnOption
+{
+    border: none;
+    background-color: white;
+    font-size: 11px;
+}
+.anchor
+{
+    color: inherit;
+  text-decoration: inherit;
+}

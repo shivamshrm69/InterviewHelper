@@ -1,0 +1,17 @@
+body{
+    background-color: #e2e2e2;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+.mainCard
+{
+    margin: auto;
+    height: 500px;
+    width: 600px;
+    text-align: center;
+}
+.mainCardDiv
+{
+    padding-top: 50px;
+}

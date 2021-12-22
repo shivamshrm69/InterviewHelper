@@ -1,0 +1,22 @@
+<body>
+<div class="mainDiv">
+    <mat-card class='mainCard'>
+        <h2 style="text-align: center;">Interview Helper</h2>
+
+        <div>
+            <mat-form-field appearance="outline" style="width: 100%; font-size: 12px;">
+                <mat-label>Select</mat-label>
+                <mat-select>
+                    <a class="anchor" routerLink="/interviewHelper"> <mat-option *ngFor="let course of courses" [value]="courses" (click)="modo(course.courseName)">
+                {{course.courseName}}
+                    
+                  </mat-option></a>
+                </mat-select>
+              </mat-form-field>
+            </div>
+    </mat-card>
+
+</div>
+    
+
+</body>
